@@ -1,0 +1,21 @@
+ul.list-register.p-5.m-3
+
+form(action="")#form.form-input.p-5.d-flex.flex-column.justify-content-center
+    .form-wrap.mb-3
+        label(for="name") Họ và tên 
+        input.w-100(type="text" name='name' id='name' placeholder='VD: Nguyễn Văn A')
+        span.form-msg
+    .form-wrap.mb-3
+        label(for="email") Email
+        input.w-100(type="email" name='email' id='email' placeholder='VD: nguyenvana@gmail.com')
+        span.form-msg
+    .form-wrap.mb-3
+        label(for="password") Mật khẩu
+        input.w-100(type="password" name='password' id='password' placeholder='Nhập mật khẩu')
+        span.form-msg
+    .form-wrap.mb-5
+        label(for="cfm-password") Nhập lại Mật khẩu
+        input.w-100(type="password" name='cfm-password' id='cfm-password' placeholder='Nhập lại mật khẩu')
+        span.form-msg
+    .form-wrap
+        button(class='btn' type='submit').w-100 Đăng ký

@@ -1,0 +1,248 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body,
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+ol,
+ul,
+li {
+    list-style-type: none;
+    margin: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+a {
+    transition: all 0.5s ease-in-out;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+i {
+    font-size: 16px;
+    &:hover {
+        color: #ff324d;
+    }
+}
+
+span,
+p {
+    font-size: 14px;
+    color: #333;
+    font-weight: 400;
+}
+
+.position-unset {
+    position: unset;
+}
+
+.hover {
+    &:hover {
+        color: #ff324d;
+    }
+    font-size: 14px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    font-weight: 400;
+    display: inline-block;
+    @include max-breakpoint(425) {
+        font-size: 16px;
+    }
+    @include max-breakpoint(425) {
+        font-size: 14px;
+    }
+}
+
+a.btn {
+    display: inline-block;
+    padding: 10px 20px !important;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 0;
+    position: relative;
+    color: #fff;
+    z-index: 0;
+    @include max-breakpoint(1024) {
+        padding: 8px 14px !important;
+    }
+    &::before {
+        right: 50%;
+        left: 0;
+    }
+    &::after {
+        right: 0;
+        left: 50%;
+    }
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        transition: all 0.3s ease-in-out;
+        z-index: -1;
+    }
+    &:hover {
+        &::before {
+            right: 100%;
+        }
+        &::after {
+            left: 100%;
+        }
+    }
+    &.btn-red {
+        border: 1px solid #ff324d;
+        &::before,
+        &::after {
+            background-color: #ff324d;
+            z-index: -1;
+        }
+        &:hover {
+            color: #ff324d;
+        }
+    }
+    &.btn-black {
+        border: 1px solid #000;
+        &::before,
+        &::after {
+            background-color: #000;
+        }
+        &:hover {
+            color: #333;
+        }
+    }
+    &.btn-white {
+        border: 1px solid #fff;
+        &::before,
+        &::after {
+            background-color: #fff;
+        }
+        color: #333;
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.p-6 {
+    padding: 100px 0;
+    @include max-breakpoint(1024) {
+        padding: 80px 0;
+    }
+    @include max-breakpoint(425) {
+        padding: 30px 0;
+    }
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    font-family: "Roboto";
+    @include max-breakpoint(1024) {
+        font-size: 30px;
+    }
+    @include max-breakpoint(425) {
+        font-size: 22px;
+    }
+}
+
+.mb-none {
+    @include max-breakpoint(1024) {
+        display: none !important;
+    }
+}
+
+.mb-dl-none {
+    @include max-breakpoint(425) {
+        display: none !important;
+    }
+}
+
+.p-mb-0 {
+    @include max-breakpoint(1024) {
+        padding: 10px;
+    }
+    @include max-breakpoint(425) {
+        padding: 15px;
+    }
+}
+
+.p-cus {
+    @include max-breakpoint(1024) {
+        padding-top: 80px !important;
+        padding-bottom: 0 !important;
+    }
+    @include max-breakpoint(425) {
+        padding: 30px 0 0 !important;
+    }
+}
+
+.mt-6 {
+    @include max-breakpoint(1024) {
+        margin-top: 80px !important;
+    }
+}
+
+.mt-3 {
+    @include max-breakpoint(1024) {
+        margin-top: 20px !important;
+    }
+}
+
+.p-mb-5 {
+    @include max-breakpoint(1024) {
+        padding: 30px !important;
+    }
+    @include max-breakpoint(425) {
+        padding: 30px 0 !important;
+    }
+}
+
+.mt-mb-0 {
+    @include max-breakpoint(425) {
+        margin-top: 0 !important;
+    }
+}
+
+.mr-mb-0 {
+    @include max-breakpoint(1024) {
+        margin-right: 0 !important;
+    }
+}

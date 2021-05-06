@@ -1,0 +1,58 @@
+.list-register {
+    border: 1px solid #333;
+    height: calc(96px + 177px);
+    overflow-y: scroll;
+    li {
+        font-size: 20px !important;
+        color: #333;
+        list-style: none;
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        }
+        p {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.form-input {
+    width: 450px;
+    min-height: 400px;
+    margin: 100px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid #333;
+    .form-wrap {
+        input {
+            padding: 10px;
+            border-radius: 4px;
+            outline: none;
+            border: 1px solid #333;
+            color: #333;
+            font-size: 14px;
+            &:focus {
+                border-color: #1dbfaf;
+            }
+            &.active {
+                border-color: red;
+            }
+            &::placeholder {
+                font-size: 12px;
+                color: rgb(161, 161, 161);
+            }
+        }
+
+        .form-msg {
+            color: red;
+            font-size: 12px;
+        }
+        label {
+            display: block;
+        }
+        button {
+            background-color: #1dbfaf;
+            color: #fff;
+            border-radius: 20px !important;
+        }
+    }
+}
